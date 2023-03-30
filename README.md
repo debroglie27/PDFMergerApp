@@ -6,7 +6,7 @@ for each pdf file, and the sequence of merging can also be adjusted accordingly.
 ### Basic View:
 This is how the App looks.
 
-![Basic View](https://raw.githubusercontent.com/debroglie27/tensorEnv/main/Tkinter_prac/Projects/PDF_Merger_App/Images/Basic_View.png)
+![Basic View](https://raw.githubusercontent.com/debroglie27/PDFMergerApp/main/Images/Basic_View.png)
 
 **We can**:
 * Add files and Remove files using the Menu Buttons on top.
