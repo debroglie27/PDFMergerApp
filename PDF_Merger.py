@@ -1,5 +1,5 @@
 # **************** Developed By: ARIJEET DE ****************
-# Last Updated: 22/03/2023
+# Last Updated: 31/03/2023
 
 from PyPDF2 import PdfReader, PdfMerger
 from tkinter import *
@@ -140,6 +140,7 @@ class PDFMergerApp:
         merge_button = Button(self.root, text="Merge", font=('Helvetica', 12), bg="#d9acfc", command=self.merge)
         merge_button.pack(pady=(33, 0), ipadx=20)
 
+    # Function to add one pdf file
     def add_file(self):
         # File path for the pdf file to be added
         file_path = filedialog.askopenfilename(initialdir="C:/Users/HP/Desktop",
@@ -174,6 +175,7 @@ class PDFMergerApp:
                                     text="", values=(self.file_count, filename, "1", total_pages),
                                     tags=("odd_row",))
 
+    # Function to add multiple pdf files
     def add_files(self):
         # File paths for pdf files to be added
         file_paths_tuple = filedialog.askopenfilenames(initialdir="C:/Users/HP/Desktop",
@@ -207,6 +209,7 @@ class PDFMergerApp:
                                     text="", values=(self.file_count, filename, "1", total_pages),
                                     tags=("odd_row",))
 
+    # Function to remove one selected pdf file
     def remove_file(self):
         # Checking whether anything was selected
         if not self.my_tree.selection():
@@ -219,6 +222,7 @@ class PDFMergerApp:
         # Decrementing file_count
         self.file_count -= 1
 
+    # Function to remove all pdf files that were added
     def remove_all_files(self):
         # get_children() -> gives all the Iids for records
         for selection in self.my_tree.get_children():
@@ -376,7 +380,10 @@ class PDFMergerApp:
 
 
 if __name__ == "__main__":
+    # Creating the Window
     root = Tk()
+
+    # Starting the App
     PDFMergerApp(root)
 
     mainloop()
